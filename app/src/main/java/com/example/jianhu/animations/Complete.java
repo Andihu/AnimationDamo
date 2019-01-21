@@ -22,8 +22,8 @@ public class Complete extends View {
 
 
     float mRadius=100;
-    float mCenntX=150f;
-    float mCentY=150f;
+    float mCenntX=0;
+    float mCentY=0;
     float mCurrentValue=-1;
 
     private boolean isNext=false;
@@ -61,7 +61,14 @@ public class Complete extends View {
         animator.start();
     }
 
+
+
     private void init() {
+
+        //这是开发分支
+
+        mCenntX=(this.getX()-this.getLeft())/2;
+        mCentY=(this.getY()-this.getTop())/2;
 
         mPaint=new Paint();
         mPaint.setStyle(Paint.Style.STROKE);
